@@ -1,0 +1,41 @@
+{
+  "package": {
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "@types/node": "^12.0.0",
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@types/jest": "^26.0.15",
+      "typescript": "^4.1.2",
+      "web-vitals": "^1.0.1"
+    },
+    "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^4.26.0",
+      "@typescript-eslint/parser": "^4.26.0",
+      "eslint": "^7.28.0",
+      "eslint-config-airbnb-typescript": "^12.3.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-import": "^2.23.4",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-prettier": "^3.4.0",
+      "eslint-plugin-react": "^7.24.0",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "eslint-plugin-unicorn": "^33.0.1",
+      "husky": "^6.0.0",
+      "lint-staged": "^11.0.0",
+      "prettier": "^2.3.1"
+    },
+    "scripts": {
+      "lint": "eslint src --ext js,jsx,ts,tsx",
+      "lint:fix": "npm run lint -- --fix",
+      "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
+      "validate": "tsc -p . --noEmit",
+      "prepare": "husky install"
+    },
+    "lint-staged": {
+      "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+    }
+  }
+}
